@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     $cadeia = isset($_GET["cadeia"]) ? $_GET["cadeia"] : "";
-    $valida = isset($_GET["valida"]) ? $_GET["valida"] : 0;
+    $valida = isset($_GET["valida"]) ? $_GET["valida"] : false;
 ?>
 <html lang="pt-br">
 <head>
@@ -10,7 +10,7 @@
     <title>Autômato de Pilha</title>
 </head>
 <body>
-    <p>Insira uma cadeia para verificar se ela pertence à linguagem de parênteses balanceados, como, por exemplo, (), ()(()), etc: </p>
+    <p>Insira uma cadeia para verificar se ela pertence à linguagem de parênteses balanceados, como, por exemplo, (), ()(()), etc.: </p>
     <form action="verificacao.php" method="post">
         <p>Cadeia: <input type="text" name="cadeia" required></p>
         <button type="submit" name="acao" value="verificar">Verificar</button>
